@@ -10,6 +10,8 @@ class UniqloDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('รายละเอียดสินค้า'),
+        backgroundColor: Colors.red.shade800, 
+        foregroundColor: Colors.white
       ),
       body: Center(
         child: Column(

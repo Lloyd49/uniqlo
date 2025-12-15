@@ -13,7 +13,7 @@ class UniqloApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Uniqlo App',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -60,7 +60,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
    
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(title: Text(widget.title),
+      backgroundColor: Colors.red.shade800, 
+      foregroundColor: Colors.white),
+      backgroundColor: const Color.fromARGB(255, 197, 197, 197),
       body: SafeArea(child: Container(
         child: ListView.builder(
           itemCount: Uniqlo.samples.length,
@@ -88,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget buildUniqloCard(Uniqlo uniqlo) {
     return Card(
       elevation: 2.0,
-      shape: BeveledRectangleBorder(
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Padding(
